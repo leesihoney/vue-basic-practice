@@ -5,8 +5,11 @@
 		</div>
 
 		<div class="product-info">
+			<span v-show="onSale">On Sale!</span>
 			<h1> {{ product }} </h1>
-			<a v-bind:href="image">Follow The Link</a>
+			<p v-if="inventory > 10">In Stock</p>
+			<p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+			<p v-else>Out of Stock</p>
 		</div>
 	</div>
 </div>
