@@ -39,10 +39,6 @@ var app = new Vue({
 		},
 		inStock() {
 			return this.variants[this.selectedVariant].variantQuantity;
-		},
-		sale() {
-			const addString = this.onSale ? " are on sale!" : " are not on sale"
-			return this.brand + ' ' + this.product + addString;
 		}
 	}
 })
